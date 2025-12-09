@@ -76,22 +76,37 @@ public class ProcessNominationJPanel extends javax.swing.JPanel {
         lblTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         lblTitle.setText("Evaluate Nomination");
 
+        lblStudent.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblStudent.setText("Student Name:");
 
+        lblHomeUni.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblHomeUni.setText("Nominated By:");
 
+        lblMajor.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblMajor.setText("Major:");
 
+        lblGPA.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblGPA.setText("GPA:");
 
+        lblComments.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblComments.setText("Decision Notes:");
 
+        txtStudent.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        txtHomeUni.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         txtHomeUni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtHomeUniActionPerformed(evt);
             }
         });
 
+        txtMajor.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        txtGPA.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        txtComments.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        btnAdmit.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnAdmit.setText("Admit Student");
         btnAdmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +114,7 @@ public class ProcessNominationJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnDeny.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnDeny.setText("Deny Admission");
         btnDeny.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,66 +140,59 @@ public class ProcessNominationJPanel extends javax.swing.JPanel {
                         .addComponent(lblTitle))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnBack)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(232, 232, 232)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblHomeUni)
-                    .addComponent(lblStudent)
-                    .addComponent(lblMajor)
-                    .addComponent(lblGPA)
-                    .addComponent(lblComments))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtStudent, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
-                    .addComponent(txtHomeUni)
-                    .addComponent(txtMajor)
-                    .addComponent(txtGPA)
+                        .addComponent(btnBack))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtComments)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 193, Short.MAX_VALUE)
-                .addComponent(btnAdmit)
-                .addGap(144, 144, 144)
-                .addComponent(btnDeny)
-                .addGap(325, 325, 325))
+                        .addGap(254, 254, 254)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblHomeUni)
+                            .addComponent(lblStudent)
+                            .addComponent(lblMajor)
+                            .addComponent(lblGPA)
+                            .addComponent(lblComments))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtStudent)
+                            .addComponent(txtHomeUni)
+                            .addComponent(txtMajor)
+                            .addComponent(txtGPA)
+                            .addComponent(txtComments, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(267, 267, 267)
+                        .addComponent(btnAdmit)
+                        .addGap(81, 81, 81)
+                        .addComponent(btnDeny)))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(lblTitle)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblStudent)
-                            .addComponent(txtStudent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblHomeUni)
-                            .addComponent(txtHomeUni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblMajor)
-                            .addComponent(txtMajor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblGPA)
-                            .addComponent(txtGPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblComments)
-                            .addComponent(txtComments, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(320, 320, 320)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnAdmit)
-                            .addComponent(btnDeny))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 353, Short.MAX_VALUE)
+                .addGap(34, 34, 34)
+                .addComponent(lblTitle)
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblStudent)
+                    .addComponent(txtStudent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblHomeUni)
+                    .addComponent(txtHomeUni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblMajor)
+                    .addComponent(txtMajor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblGPA)
+                    .addComponent(txtGPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblComments)
+                    .addComponent(txtComments, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(74, 74, 74)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAdmit)
+                    .addComponent(btnDeny))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 271, Short.MAX_VALUE)
                 .addComponent(btnBack)
                 .addContainerGap())
         );

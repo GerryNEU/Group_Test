@@ -160,6 +160,7 @@ public class ProcessFinalBackgroundCheckJPanel extends javax.swing.JPanel {
         lblAid = new javax.swing.JLabel();
         txtFinanceStatus = new javax.swing.JTextField();
 
+        btnBack.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,23 +168,31 @@ public class ProcessFinalBackgroundCheckJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel1.setText("Background Check Verification");
 
+        lblStudent.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblStudent.setText("Student Name:");
 
+        lblPassport.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblPassport.setText("Passport No:");
 
+        lblCountry.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblCountry.setText("Country:");
 
+        txtStudent.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         txtStudent.setEnabled(false);
 
+        txtPassport.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         txtPassport.setEnabled(false);
 
+        txtCountry.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         txtCountry.setEnabled(false);
 
+        chkLegalCheck.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         chkLegalCheck.setText("Background Check Passed");
 
+        chkFinancialProof.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         chkFinancialProof.setText("Financial Proof Verified");
         chkFinancialProof.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,8 +200,10 @@ public class ProcessFinalBackgroundCheckJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblNotes.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblNotes.setText("Verifier Notes:");
 
+        btnApprove.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnApprove.setText("Approve & Forward");
         btnApprove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,6 +211,7 @@ public class ProcessFinalBackgroundCheckJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnReject.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnReject.setText("Reject Application");
         btnReject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,62 +220,59 @@ public class ProcessFinalBackgroundCheckJPanel extends javax.swing.JPanel {
         });
 
         txtNotes.setColumns(20);
+        txtNotes.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         txtNotes.setRows(5);
         jScrollPane1.setViewportView(txtNotes);
 
+        lblAid.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblAid.setText("Finance Aid:");
 
         txtFinanceStatus.setEditable(false);
+        txtFinanceStatus.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnApprove)
+                .addGap(78, 78, 78)
+                .addComponent(btnReject)
+                .addGap(230, 230, 230))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
+                        .addContainerGap()
                         .addComponent(btnBack))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(142, 142, 142)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblPassport)
-                                    .addComponent(lblStudent)
-                                    .addComponent(lblCountry)
-                                    .addComponent(lblAid))
-                                .addGap(39, 39, 39)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtStudent, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
-                                    .addComponent(txtPassport, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
-                                    .addComponent(txtCountry, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
-                                    .addComponent(chkFinancialProof)
-                                    .addComponent(chkLegalCheck)
-                                    .addComponent(txtFinanceStatus)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(btnApprove)
-                                .addGap(119, 119, 119)
-                                .addComponent(btnReject))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
+                        .addGap(282, 282, 282)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(lblNotes)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(151, Short.MAX_VALUE))
+                        .addGap(142, 142, 142)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblPassport)
+                            .addComponent(lblStudent)
+                            .addComponent(lblCountry)
+                            .addComponent(lblAid)
+                            .addComponent(lblNotes))
+                        .addGap(39, 39, 39)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtStudent, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                            .addComponent(txtPassport)
+                            .addComponent(txtCountry)
+                            .addComponent(chkFinancialProof)
+                            .addComponent(chkLegalCheck)
+                            .addComponent(txtFinanceStatus)
+                            .addComponent(jScrollPane1))))
+                .addGap(138, 138, 138))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(btnBack)
-                .addGap(9, 9, 9)
+                .addGap(50, 50, 50)
                 .addComponent(jLabel1)
-                .addGap(37, 37, 37)
+                .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblStudent)
                     .addComponent(txtStudent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -279,19 +288,21 @@ public class ProcessFinalBackgroundCheckJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAid)
                     .addComponent(txtFinanceStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addComponent(chkLegalCheck)
                 .addGap(18, 18, 18)
                 .addComponent(chkFinancialProof)
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblNotes)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(84, 84, 84)
+                .addGap(57, 57, 57)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblNotes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(126, 126, 126)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnApprove)
                     .addComponent(btnReject))
-                .addGap(77, 77, 77))
+                .addGap(30, 30, 30)
+                .addComponent(btnBack)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 

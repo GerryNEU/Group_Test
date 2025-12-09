@@ -166,20 +166,22 @@ public class SystemAuditorWorkAreaJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblStatusStats);
 
-        lblStudentVal.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        lblStudentVal.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         lblStudentVal.setText("Students");
 
-        lblEntVal.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        lblEntVal.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         lblEntVal.setText("Enterprises");
 
-        lblPendingVal.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        lblPendingVal.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         lblPendingVal.setText("Pending");
 
-        lblAppVal.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        lblAppVal.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         lblAppVal.setText("Approved");
 
+        jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel5.setText("Requests by Status");
 
+        jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel6.setText("Requests by Enterprise");
 
         tblEnterpriseStats.setModel(new javax.swing.table.DefaultTableModel(
@@ -195,6 +197,7 @@ public class SystemAuditorWorkAreaJPanel extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(tblEnterpriseStats);
 
+        btnRefresh.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,6 +209,23 @@ public class SystemAuditorWorkAreaJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(197, 197, 197)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblTitle)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblEntVal)
+                                .addGap(156, 156, 156)
+                                .addComponent(lblPendingVal)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)
+                                .addComponent(lblAppVal)))))
+                .addGap(72, 72, 72))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,35 +235,23 @@ public class SystemAuditorWorkAreaJPanel extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblStudentVal)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jScrollPane2)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 707, Short.MAX_VALUE)))
-                        .addGap(63, 63, 63))))
+                            .addComponent(jLabel6))
+                        .addGap(632, 632, 632))))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addComponent(lblTitle))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(78, 78, 78)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(197, 197, 197)
-                                .addComponent(lblEntVal)
-                                .addGap(156, 156, 156)
-                                .addComponent(lblPendingVal)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
-                                .addComponent(lblAppVal)))))
-                .addGap(72, 72, 72))
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addGap(31, 31, 31)
                 .addComponent(lblTitle)
-                .addGap(36, 36, 36)
+                .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblStudentVal)
                     .addComponent(lblEntVal)
@@ -259,7 +267,7 @@ public class SystemAuditorWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addComponent(btnRefresh)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
