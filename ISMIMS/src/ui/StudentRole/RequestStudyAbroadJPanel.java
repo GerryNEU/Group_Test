@@ -59,6 +59,7 @@ public class RequestStudyAbroadJPanel extends javax.swing.JPanel {
         txtGPA = new javax.swing.JTextField();
         txtTargetUni = new javax.swing.JTextField();
 
+        btnBack.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,6 +67,7 @@ public class RequestStudyAbroadJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnSubmit.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,54 +75,66 @@ public class RequestStudyAbroadJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         lblTitle.setText("New Study Abroad Application");
 
+        lblStudentName.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblStudentName.setText("Student Name:");
 
+        lblMajor.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblMajor.setText("Major:");
 
+        lblGPA.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblGPA.setText("Current GPA:");
 
+        lblTargetUni.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblTargetUni.setText("Target University:");
+
+        txtStudentName.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        txtMajor.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        txtGPA.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        txtTargetUni.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 295, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblMajor)
+                            .addComponent(lblStudentName)
+                            .addComponent(lblGPA)
+                            .addComponent(lblTargetUni))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtStudentName)
+                            .addComponent(txtMajor)
+                            .addComponent(txtGPA)
+                            .addComponent(txtTargetUni, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(lblTitle))
+                .addGap(274, 274, 274))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblMajor)
-                                .addComponent(lblStudentName)
-                                .addComponent(lblGPA)
-                                .addComponent(lblTargetUni))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtStudentName)
-                                .addComponent(txtMajor)
-                                .addComponent(txtGPA)
-                                .addComponent(txtTargetUni, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btnBack))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(315, 315, 315)
-                                .addComponent(lblTitle))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(390, 390, 390)
+                        .addContainerGap()
+                        .addComponent(btnBack))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(401, 401, 401)
                         .addComponent(btnSubmit)))
-                .addContainerGap(380, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(46, 46, 46)
+                .addGap(45, 45, 45)
                 .addComponent(lblTitle)
-                .addGap(18, 18, 18)
+                .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblStudentName)
                     .addComponent(txtStudentName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -136,9 +150,9 @@ public class RequestStudyAbroadJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTargetUni)
                     .addComponent(txtTargetUni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
+                .addGap(49, 49, 49)
                 .addComponent(btnSubmit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 303, Short.MAX_VALUE)
                 .addComponent(btnBack)
                 .addContainerGap())
         );

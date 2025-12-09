@@ -70,21 +70,34 @@ public class ProcessCourseTransferJPanel extends javax.swing.JPanel {
         lblTitle.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
         lblTitle.setText("Issue Transcript");
 
+        lblStudent.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblStudent.setText("Student");
 
         txtStudent.setEditable(false);
+        txtStudent.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        txtStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStudentActionPerformed(evt);
+            }
+        });
 
+        lblCourse.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblCourse.setText("University:");
 
         txtUniversity.setEditable(false);
+        txtUniversity.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         txtUniversity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUniversityActionPerformed(evt);
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel1.setText("Grade:");
 
+        txtGrade.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        btnIssue.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnIssue.setText("Issue Transcript");
         btnIssue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +105,7 @@ public class ProcessCourseTransferJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnBack.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,11 +117,23 @@ public class ProcessCourseTransferJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lblTitle)
+                .addGap(346, 346, 346))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(258, 258, 258)
-                        .addComponent(lblTitle))
+                        .addGap(268, 268, 268)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblCourse)
+                            .addComponent(lblStudent)
+                            .addComponent(jLabel1))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtGrade, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtUniversity, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtStudent, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(230, 230, 230)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,32 +149,34 @@ public class ProcessCourseTransferJPanel extends javax.swing.JPanel {
                                     .addComponent(txtGrade, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(btnBack)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(328, 328, 328)
+                        .addGap(365, 365, 365)
                         .addComponent(btnIssue)))
-                .addContainerGap(372, Short.MAX_VALUE))
+                .addContainerGap(320, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
+                .addGap(43, 43, 43)
                 .addComponent(lblTitle)
-                .addGap(62, 62, 62)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblStudent)
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(lblStudent))
                     .addComponent(txtStudent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(53, 53, 53)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCourse)
                     .addComponent(txtUniversity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtGrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(67, 67, 67)
+                .addGap(54, 54, 54)
                 .addComponent(btnIssue)
-                .addGap(80, 80, 80)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 362, Short.MAX_VALUE)
                 .addComponent(btnBack)
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -186,6 +214,10 @@ public class ProcessCourseTransferJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         goBack();
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void txtStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStudentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStudentActionPerformed
 
 
 private void goBack() {

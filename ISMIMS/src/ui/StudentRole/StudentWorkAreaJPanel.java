@@ -54,6 +54,7 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
         lblValue = new javax.swing.JLabel();
         btnFindInternship = new javax.swing.JButton();
 
+        btnApply.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnApply.setText("Request Study Abroad");
         btnApply.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,6 +62,7 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnStatus.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnStatus.setText("View Application Status");
         btnStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +79,7 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
         lblValue.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblValue.setText("<value>");
 
+        btnFindInternship.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnFindInternship.setText("Find Internship");
         btnFindInternship.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,39 +94,42 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(223, 223, 223)
-                        .addComponent(btnApply)
-                        .addGap(37, 37, 37)
-                        .addComponent(btnStatus))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(208, 208, 208)
-                        .addComponent(lblEnterprise)
-                        .addGap(138, 138, 138)
-                        .addComponent(lblValue))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(316, 316, 316)
+                        .addGap(348, 348, 348)
                         .addComponent(lblTitle))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(348, 348, 348)
-                        .addComponent(btnFindInternship)))
-                .addContainerGap(309, Short.MAX_VALUE))
+                        .addGap(208, 208, 208)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnApply)
+                                    .addComponent(btnFindInternship, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(84, 84, 84)
+                                .addComponent(btnStatus))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblEnterprise)
+                                .addGap(129, 129, 129)
+                                .addComponent(lblValue)))))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(71, 71, 71)
+                .addGap(60, 60, 60)
                 .addComponent(lblTitle)
-                .addGap(81, 81, 81)
+                .addGap(79, 79, 79)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnApply)
                     .addComponent(btnStatus))
-                .addGap(18, 18, 18)
-                .addComponent(btnFindInternship)
-                .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEnterprise)
-                    .addComponent(lblValue))
-                .addContainerGap(402, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblValue)
+                            .addComponent(lblEnterprise)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(btnFindInternship)))
+                .addContainerGap(384, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

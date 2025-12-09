@@ -128,6 +128,7 @@ public void populateTable() {
         ));
         jScrollPane2.setViewportView(tblWorkQueue);
 
+        btnProcessTransfer.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnProcessTransfer.setText("Process Course Transfer");
         btnProcessTransfer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,13 +156,13 @@ public void populateTable() {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(27, 27, 27)
                 .addComponent(lblTitle)
-                .addGap(28, 28, 28)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(btnProcessTransfer)
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addGap(16, 16, 16))
         );
     }// </editor-fold>//GEN-END:initComponents
 

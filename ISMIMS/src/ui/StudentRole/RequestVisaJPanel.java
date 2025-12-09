@@ -58,6 +58,7 @@ public class RequestVisaJPanel extends javax.swing.JPanel {
         lblNote = new javax.swing.JLabel();
         btnSubmit = new javax.swing.JButton();
 
+        btnBack.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,8 +66,10 @@ public class RequestVisaJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblCountry.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblCountry.setText("Issuing Country:");
 
+        lblPassport.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblPassport.setText("Passport NUmber:");
 
         txtCountry.addActionListener(new java.awt.event.ActionListener() {
@@ -78,8 +81,10 @@ public class RequestVisaJPanel extends javax.swing.JPanel {
         lblTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         lblTitle.setText("Apply for Student Visa");
 
+        lblNote.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblNote.setText("Note: Financial Proof will be automatically attached from your Financial Aid record.");
 
+        btnSubmit.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnSubmit.setText("Submit Application");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,17 +96,15 @@ public class RequestVisaJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 132, Short.MAX_VALUE)
+                .addComponent(lblNote)
+                .addGap(98, 98, 98))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnBack))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(301, 301, 301)
-                        .addComponent(lblTitle))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(175, 175, 175)
-                        .addComponent(lblNote))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(215, 215, 215)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,16 +118,19 @@ public class RequestVisaJPanel extends javax.swing.JPanel {
                             .addComponent(txtPassport, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
                             .addComponent(txtCountry)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(323, 323, 323)
+                        .addGap(329, 329, 329)
+                        .addComponent(lblTitle))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(358, 358, 358)
                         .addComponent(btnSubmit)))
-                .addContainerGap(278, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(152, 152, 152)
+                .addGap(93, 93, 93)
                 .addComponent(lblTitle)
-                .addGap(43, 43, 43)
+                .addGap(102, 102, 102)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCountry)
                     .addComponent(txtCountry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -132,11 +138,11 @@ public class RequestVisaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPassport)
                     .addComponent(txtPassport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
+                .addGap(47, 47, 47)
                 .addComponent(btnSubmit)
-                .addGap(49, 49, 49)
+                .addGap(57, 57, 57)
                 .addComponent(lblNote)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 279, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 242, Short.MAX_VALUE)
                 .addComponent(btnBack)
                 .addContainerGap())
         );

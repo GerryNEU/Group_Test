@@ -101,6 +101,7 @@ public class ProcessVisaRequestJPanel extends javax.swing.JPanel {
         lblAid = new javax.swing.JLabel();
         txtAid = new javax.swing.JTextField();
 
+        btnIssue.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnIssue.setText("Generate Visa & Issue");
         btnIssue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,74 +109,88 @@ public class ProcessVisaRequestJPanel extends javax.swing.JPanel {
             }
         });
 
+        chkLegal.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         chkLegal.setText("Legal Background Check Passed");
 
+        chkFinancial.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         chkFinancial.setText("Financial Proof Verified");
 
         lblTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         lblTitle.setText("Issue Student Visa");
 
+        lblStudent.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblStudent.setText("Student Name:");
 
+        lblPassport.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblPassport.setText("Passport No:");
 
+        lblCountry.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblCountry.setText("Destination Country:");
 
+        lblVisaNumber.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblVisaNumber.setText("Visa Number:");
 
         lblCheck.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblCheck.setText("Verification Status (ReadOnly):");
 
+        txtStudent.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        txtPassport.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        txtCountry.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        txtVisaNumber.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        lblAid.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblAid.setText("Finance Aid");
 
         txtAid.setEditable(false);
+        txtAid.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblCheck)
-                        .addGap(318, 318, 318))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(chkFinancial)
-                            .addComponent(chkLegal))
-                        .addGap(327, 327, 327))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(178, 178, 178)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblPassport)
-                            .addComponent(lblStudent)
-                            .addComponent(lblCountry)
-                            .addComponent(lblVisaNumber)
-                            .addComponent(lblAid))
-                        .addGap(98, 98, 98)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtVisaNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                            .addComponent(txtCountry)
-                            .addComponent(txtPassport)
-                            .addComponent(txtStudent)
-                            .addComponent(txtAid)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(368, 368, 368)
                         .addComponent(lblTitle))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(367, 367, 367)
-                        .addComponent(btnIssue)))
-                .addContainerGap(332, Short.MAX_VALUE))
+                        .addGap(266, 266, 266)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(chkFinancial)
+                                .addComponent(chkLegal))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblPassport)
+                                    .addComponent(lblStudent)
+                                    .addComponent(lblCountry)
+                                    .addComponent(lblVisaNumber)
+                                    .addComponent(lblAid))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtPassport, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtAid, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtVisaNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(70, 70, 70)
+                                .addComponent(lblCheck)))))
+                .addContainerGap(287, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnIssue)
+                .addGap(319, 319, 319))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(lblTitle)
-                .addGap(17, 17, 17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblStudent)
                     .addComponent(txtStudent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -195,15 +210,15 @@ public class ProcessVisaRequestJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAid)
                     .addComponent(txtAid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addGap(113, 113, 113)
                 .addComponent(lblCheck)
                 .addGap(18, 18, 18)
                 .addComponent(chkLegal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(chkFinancial)
-                .addGap(96, 96, 96)
+                .addGap(138, 138, 138)
                 .addComponent(btnIssue)
-                .addGap(188, 188, 188))
+                .addGap(60, 60, 60))
         );
     }// </editor-fold>//GEN-END:initComponents
 
