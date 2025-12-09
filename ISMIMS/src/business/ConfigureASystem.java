@@ -97,6 +97,9 @@ public class ConfigureASystem {
         // --- HOST UNIVERSITY Staff ---
         Employee adminOfficer = adminOrg.getEmployeeDirectory().createEmployee("Prof. James Wilson");
         adminOrg.getUserAccountDirectory().createUserAccount("admissions", "admissions", adminOfficer, new AdmissionsOfficerRole());
+        
+        Employee hostregistrar = regOrg.getEmployeeDirectory().createEmployee("John Kuffler");
+        regOrg.getUserAccountDirectory().createUserAccount("hostregistrar", "hostregistrar", registrar, new RegistrarRole());
 
         // --- GOVERNMENT Staff ---
         Employee visaSpec = visaOrg.getEmployeeDirectory().createEmployee("Agent Robert Brown");
@@ -104,7 +107,7 @@ public class ConfigureASystem {
         
         Employee legalVerifier = legalOrg.getEmployeeDirectory().createEmployee("Attorney Lisa Martinez");
         legalOrg.getUserAccountDirectory().createUserAccount("legal", "legal", legalVerifier, new LegalVerifierRole());
-
+        
         // --- CORPORATE Staff ---
         Employee recruiter = hrOrg.getEmployeeDirectory().createEmployee("Jennifer Lee");
         hrOrg.getUserAccountDirectory().createUserAccount("recruiter", "recruiter", recruiter, new CorporateRecruiterRole());

@@ -37,24 +37,19 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnBack" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="lblPassport" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblStudent" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblCountry" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblVisaNumber" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblAid" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtVisaNumber" alignment="0" pref="163" max="32767" attributes="0"/>
-                                  <Component id="txtCountry" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtPassport" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtStudent" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtAid" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="lblPassport" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblStudent" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCountry" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblVisaNumber" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAid" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txtVisaNumber" alignment="0" pref="163" max="32767" attributes="0"/>
+                          <Component id="txtCountry" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtPassport" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtStudent" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtAid" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -108,19 +103,12 @@
               <Component id="chkFinancial" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
               <Component id="btnIssue" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
-              <Component id="btnBack" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="188" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="btnBack">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&lt;&lt; Back"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="btnIssue">
       <Properties>
         <Property name="text" type="java.lang.String" value="Generate Visa &amp; Issue"/>

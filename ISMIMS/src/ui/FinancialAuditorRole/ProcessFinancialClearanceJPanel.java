@@ -291,7 +291,7 @@ public class ProcessFinancialClearanceJPanel extends javax.swing.JPanel {
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         goBack();
-        }                                       
+    }                                       
 
         private void goBack() {
             userProcessContainer.remove(this);

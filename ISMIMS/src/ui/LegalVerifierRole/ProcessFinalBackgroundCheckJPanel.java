@@ -38,6 +38,8 @@ public class ProcessFinalBackgroundCheckJPanel extends javax.swing.JPanel {
     this.organization = organization;
     this.system = system;
     
+    chkFinancialProof.setEnabled(false);
+    
     populateData();
 }
     
@@ -183,6 +185,11 @@ public class ProcessFinalBackgroundCheckJPanel extends javax.swing.JPanel {
         chkLegalCheck.setText("Background Check Passed");
 
         chkFinancialProof.setText("Financial Proof Verified");
+        chkFinancialProof.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkFinancialProofActionPerformed(evt);
+            }
+        });
 
         lblNotes.setText("Verifier Notes:");
 
@@ -360,6 +367,10 @@ public class ProcessFinalBackgroundCheckJPanel extends javax.swing.JPanel {
         goBack();
     }//GEN-LAST:event_btnBackActionPerformed
 
+    private void chkFinancialProofActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkFinancialProofActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chkFinancialProofActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnApprove;
@@ -374,7 +385,6 @@ public class ProcessFinalBackgroundCheckJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblNotes;
     private javax.swing.JLabel lblPassport;
     private javax.swing.JLabel lblStudent;
-    private javax.swing.JTextField txtAid;
     private javax.swing.JTextField txtCountry;
     private javax.swing.JTextField txtFinanceStatus;
     private javax.swing.JTextArea txtNotes;

@@ -85,7 +85,6 @@ public class ProcessVisaRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
         btnIssue = new javax.swing.JButton();
         chkLegal = new javax.swing.JCheckBox();
         chkFinancial = new javax.swing.JCheckBox();
@@ -101,8 +100,6 @@ public class ProcessVisaRequestJPanel extends javax.swing.JPanel {
         txtVisaNumber = new javax.swing.JTextField();
         lblAid = new javax.swing.JLabel();
         txtAid = new javax.swing.JTextField();
-
-        btnBack.setText("<< Back");
 
         btnIssue.setText("Generate Visa & Issue");
         btnIssue.addActionListener(new java.awt.event.ActionListener() {
@@ -153,21 +150,18 @@ public class ProcessVisaRequestJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(178, 178, 178)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnBack, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblPassport)
-                                    .addComponent(lblStudent)
-                                    .addComponent(lblCountry)
-                                    .addComponent(lblVisaNumber)
-                                    .addComponent(lblAid))
-                                .addGap(98, 98, 98)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtVisaNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                                    .addComponent(txtCountry)
-                                    .addComponent(txtPassport)
-                                    .addComponent(txtStudent)
-                                    .addComponent(txtAid)))))
+                            .addComponent(lblPassport)
+                            .addComponent(lblStudent)
+                            .addComponent(lblCountry)
+                            .addComponent(lblVisaNumber)
+                            .addComponent(lblAid))
+                        .addGap(98, 98, 98)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtVisaNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                            .addComponent(txtCountry)
+                            .addComponent(txtPassport)
+                            .addComponent(txtStudent)
+                            .addComponent(txtAid)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(368, 368, 368)
                         .addComponent(lblTitle))
@@ -209,9 +203,7 @@ public class ProcessVisaRequestJPanel extends javax.swing.JPanel {
                 .addComponent(chkFinancial)
                 .addGap(96, 96, 96)
                 .addComponent(btnIssue)
-                .addGap(159, 159, 159)
-                .addComponent(btnBack)
-                .addContainerGap())
+                .addGap(188, 188, 188))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -229,11 +221,20 @@ public class ProcessVisaRequestJPanel extends javax.swing.JPanel {
         btnIssue.setEnabled(false);
         
         JOptionPane.showMessageDialog(null, "Visa Generated Successfully!\nNumber: " + visaNum);
+        
+        goBack();
+        
+        
     }//GEN-LAST:event_btnIssueActionPerformed
 
+    private void goBack() {
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnIssue;
     private javax.swing.JCheckBox chkFinancial;
     private javax.swing.JCheckBox chkLegal;
