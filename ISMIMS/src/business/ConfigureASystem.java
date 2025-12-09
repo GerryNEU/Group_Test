@@ -98,8 +98,10 @@ public class ConfigureASystem {
         Employee adminOfficer = adminOrg.getEmployeeDirectory().createEmployee("Prof. James Wilson");
         adminOrg.getUserAccountDirectory().createUserAccount("admissions", "admissions", adminOfficer, new AdmissionsOfficerRole());
         
-        Employee hostregistrar = regOrg.getEmployeeDirectory().createEmployee("John Kuffler");
-        regOrg.getUserAccountDirectory().createUserAccount("hostregistrar", "hostregistrar", registrar, new RegistrarRole());
+
+        
+        Employee hostregistrar = hostRegOrg.getEmployeeDirectory().createEmployee("John Kuffler");
+        hostRegOrg.getUserAccountDirectory().createUserAccount("hostregistrar", "hostregistrar", hostregistrar, new RegistrarRole());
 
         // --- GOVERNMENT Staff ---
         Employee visaSpec = visaOrg.getEmployeeDirectory().createEmployee("Agent Robert Brown");
