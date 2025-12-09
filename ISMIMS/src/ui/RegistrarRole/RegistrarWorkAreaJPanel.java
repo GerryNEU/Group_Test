@@ -11,6 +11,7 @@ import business.useraccount.UserAccount;
 import javax.swing.JPanel;
 import business.workqueue.CourseTransferRequest;
 import business.workqueue.WorkRequest;
+import business.workqueue.StudyAbroadApplication;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
 import java.awt.CardLayout;
@@ -39,34 +40,64 @@ public class RegistrarWorkAreaJPanel extends javax.swing.JPanel {
         this.business = business;
         populateTable();
     }
-    public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) tblWorkQueue.getModel();
-        model.setRowCount(0); // Clear existing rows
+public void populateTable() {
+    DefaultTableModel model = (DefaultTableModel) tblWorkQueue.getModel();
+    model.setRowCount(0);
 
-        // Get all CourseTransferRequest from organization's work queue
-        for (WorkRequest request : organization.getWorkQueue().getWorkRequestList()) {
-            if (request instanceof CourseTransferRequest) {
-                CourseTransferRequest ctr = (CourseTransferRequest) request;
+    System.out.println("=== REGISTRAR DEBUG ===");
+    System.out.println("Enterprise: " + enterprise.getName());
+    
+    int found = 0;
+    int accepted = 0;
 
-                // Get student name
-                String studentName = "N/A";
-                if (ctr.getSender() != null && ctr.getSender().getEmployee() != null) {
-                    studentName = ctr.getSender().getEmployee().getName();
+    // ⭐⭐⭐ 修改：查询所有 Network 中的所有 Enterprise 的所有 Organization ⭐⭐⭐
+    for (business.network.Network network : business.getNetworkList()) {
+        for (business.enterprise.Enterprise ent : network.getEnterpriseDirectory().getEnterpriseList()) {
+            for (business.organization.Organization org : ent.getOrganizationDirectory().getOrganizationList()) {
+                
+                // 查询这个 Organization 的所有用户
+                for (business.useraccount.UserAccount userAcc : org.getUserAccountDirectory().getUserAccountList()) {
+                    
+                    for (WorkRequest request : userAcc.getWorkQueue().getWorkRequestList()) {
+                        if (request instanceof StudyAbroadApplication) {
+                            found++;
+                            StudyAbroadApplication app = (StudyAbroadApplication) request;
+                            
+                            System.out.println("Found app #" + found);
+                            System.out.println("  Status: " + app.getStatus());
+                            System.out.println("  University: " + app.getSelectedUniversity());
+
+                            if ("Offer Accepted".equals(app.getStatus()) && 
+                                app.getSelectedUniversity().contains(enterprise.getName())) {
+                                
+                                accepted++;
+                                System.out.println("  ✅ MATCH! Adding to table...");
+
+                                String studentName = "N/A";
+                                if (app.getSender() != null && app.getSender().getEmployee() != null) {
+                                    studentName = app.getSender().getEmployee().getName();
+                                }
+
+                                Object[] row = new Object[5];
+                                row[0] = app;
+                                row[1] = studentName;
+                                row[2] = app.getSelectedUniversity();
+                                row[3] = app.getStatus();
+                                row[4] = "Ready for transcript";
+                                model.addRow(row);
+                            }
+                        }
+                    }
                 }
-
-                // Get courses requested (adjust based on actual field)
-                String courses = "Course Info";  
-
-                Object[] row = new Object[5];
-                row[0] = ctr; // Store the whole object
-                row[1] = studentName;
-                row[2] = courses;
-                row[3] = ctr.getStatus();
-                row[4] = ctr.getMessage();
-                model.addRow(row);
             }
         }
     }
+    
+    System.out.println("Total apps found: " + found);
+    System.out.println("Accepted & matching: " + accepted);
+    System.out.println("Table rows: " + model.getRowCount());
+    System.out.println("======================");
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -82,7 +113,7 @@ public class RegistrarWorkAreaJPanel extends javax.swing.JPanel {
         btnProcessTransfer = new javax.swing.JButton();
 
         lblTitle.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
-        lblTitle.setText("Registrar Work Area");
+        lblTitle.setText("Registrar Work Area1");
 
         tblWorkQueue.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -112,15 +143,15 @@ public class RegistrarWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(316, 316, 316)
-                        .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 324, Short.MAX_VALUE))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnProcessTransfer)
-                .addGap(334, 334, 334))
+                        .addGap(31, 31, 31)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 704, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(btnProcessTransfer))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(242, 242, 242)
+                        .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,22 +168,24 @@ public class RegistrarWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnProcessTransferActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessTransferActionPerformed
        int selectedRow = tblWorkQueue.getSelectedRow();
-       if (selectedRow < 0) {
-           JOptionPane.showMessageDialog(null, 
-               "Please select a course transfer request to process.");
-           return;
-       }
+    if (selectedRow < 0) {
+        JOptionPane.showMessageDialog(null, 
+            "Please select a student to issue transcript.");
+        return;
+    }
 
-       // Get the request object from the first column
-       CourseTransferRequest request = (CourseTransferRequest) 
-           tblWorkQueue.getValueAt(selectedRow, 0);
+    StudyAbroadApplication app = (StudyAbroadApplication) tblWorkQueue.getValueAt(selectedRow, 0);
 
-       // Navigate to process panel
-       ProcessCourseTransferJPanel panel = new ProcessCourseTransferJPanel(
-           userProcessContainer, request, business);
-       userProcessContainer.add("ProcessCourseTransfer", panel);
-       CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-       layout.next(userProcessContainer);
+    CourseTransferRequest request = new CourseTransferRequest();
+    request.setSender(app.getSender());
+    request.setStatus("Pending");
+    request.setMessage("Transcript request for " + app.getSelectedUniversity());
+
+    ProcessCourseTransferJPanel panel = new ProcessCourseTransferJPanel(
+        userProcessContainer, request, business);
+    userProcessContainer.add("ProcessCourseTransfer", panel);
+    CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+    layout.next(userProcessContainer);
     }//GEN-LAST:event_btnProcessTransferActionPerformed
 
 
