@@ -79,111 +79,78 @@ public class ProcessApplicationJPanel extends javax.swing.JPanel {
         btnApprove = new javax.swing.JButton();
         btnReject = new javax.swing.JButton();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel1.setText("Review Application");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, -1, -1));
 
+        lblStudent.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblStudent.setText("Student:");
+        add(lblStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, -1, -1));
 
+        lblMajor.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblMajor.setText("Major:");
+        add(lblMajor, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
 
+        lblGPA.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblGPA.setText("GPA:");
+        add(lblGPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, -1, -1));
 
+        lblTargetUni.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblTargetUni.setText("Target Uni:");
+        add(lblTargetUni, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, -1, -1));
 
+        lblMessage.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblMessage.setText("Officer Comments:");
+        add(lblMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, -1, -1));
 
+        txtStudent.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        add(txtStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 283, -1));
+
+        txtMajor.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        add(txtMajor, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 283, -1));
+
+        txtGPA.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        add(txtGPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 283, -1));
+
+        txtTargetUni.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        add(txtTargetUni, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, 283, -1));
+
+        txtMessage.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        txtMessage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMessageActionPerformed(evt);
+            }
+        });
+        add(txtMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 283, 89));
+
+        btnBack.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 690, -1, -1));
 
+        btnApprove.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnApprove.setText("Nominate Student");
         btnApprove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnApproveActionPerformed(evt);
             }
         });
+        add(btnApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 488, -1, -1));
 
+        btnReject.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnReject.setText("Reject Application");
         btnReject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRejectActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(370, 370, 370)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(btnBack)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 251, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblMajor)
-                            .addComponent(lblStudent)
-                            .addComponent(lblGPA)
-                            .addComponent(lblTargetUni)
-                            .addComponent(lblMessage))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtStudent, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-                                .addComponent(txtMajor, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtGPA, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtTargetUni, javax.swing.GroupLayout.Alignment.LEADING))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnApprove)
-                        .addGap(73, 73, 73)
-                        .addComponent(btnReject)
-                        .addGap(23, 23, 23)))
-                .addGap(238, 238, 238))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblStudent)
-                    .addComponent(txtStudent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblMajor)
-                    .addComponent(txtMajor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblGPA)
-                    .addComponent(txtGPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTargetUni)
-                    .addComponent(txtTargetUni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblMessage)
-                    .addComponent(txtMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnApprove)
-                    .addComponent(btnReject))
-                .addGap(28, 28, 28)
-                .addComponent(btnBack)
-                .addContainerGap(292, Short.MAX_VALUE))
-        );
+        add(btnReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 490, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
@@ -274,6 +241,10 @@ public class ProcessApplicationJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         goBack();
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void txtMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMessageActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMessageActionPerformed
 
     private void goBack(){
         userProcessContainer.remove(this);
